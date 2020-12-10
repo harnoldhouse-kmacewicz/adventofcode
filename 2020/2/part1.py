@@ -11,3 +11,5 @@ with open('./input.txt', 'r') as input:
         if int(number_policy.split("-")[0]) <= counted_apperances and counted_apperances <= int(number_policy.split("-")[1]):
             wrong_passwords += 1
     print(wrong_passwords)
+
+input.close()

@@ -7,3 +7,5 @@ with open('./input.txt', 'r') as input:
         for compare_number in list_numbers[i:len(list_numbers)]:
             if int(list_numbers[i]) + int(compare_number) == 2020:
                 print(list_numbers[i]*compare_number)
+    
+input.close()

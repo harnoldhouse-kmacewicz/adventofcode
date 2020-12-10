@@ -17,3 +17,5 @@ with open('./input.txt', 'r') as input:
                 wrong_passwords += 1
 
     print(wrong_passwords)
+
+input.close()

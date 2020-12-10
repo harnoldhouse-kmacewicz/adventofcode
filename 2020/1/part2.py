@@ -8,3 +8,5 @@ with open('./input.txt', 'r') as input:
             for i_2 in list_numbers[i_1:len(list_numbers)]:
                 if list_numbers[i]+list_numbers[i_1]+i_2 == 2020:
                     print(list_numbers[i]*list_numbers[i_1]*i_2)
+
+input.close()
