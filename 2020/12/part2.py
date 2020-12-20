@@ -23,6 +23,13 @@ direction_reverse = {
     270: "W"
 }
 
+waypoint_position = {
+    "N": 1,
+    "E": 10,
+    "S": 0,
+    "W": 0
+}
+
 def calculate_direction(rotate, waypoint_position):
     next_waypoint_position = {}
     parse_rotate = re.split("(R|L)", rotate)
@@ -63,15 +70,6 @@ def calculate_direction(rotate, waypoint_position):
         next_waypoint_position[direction_reverse[calculated_direction]] = waypoint_position["W"]
 
     return next_waypoint_position
-
-count = 0
-
-waypoint_position = {
-    "N": 1,
-    "E": 10,
-    "S": 0,
-    "W": 0
-}
 
 with open('./input.txt', 'r') as input:
     list_lines = input.read().split('\n')
