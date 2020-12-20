@@ -17,10 +17,10 @@ direction = {
 }
 
 direction_reverse = {
-    "0": "N",
-    "90": "E",
-    "180": "S",
-    "270": "W"
+    0: "N",
+    90: "E",
+    180: "S",
+    270: "W"
 }
 
 def calculate_direction(current, rotate):
@@ -35,7 +35,7 @@ def calculate_direction(current, rotate):
         if rotated > 270:
             rotated = rotated - 360
             
-    return direction_reverse[str(rotated)]
+    return direction_reverse[rotated]
 
 count = 0
 with open('./input.txt', 'r') as input:
@@ -58,5 +58,4 @@ with open('./input.txt', 'r') as input:
             result[current_direction] += int(current_line_parsed[1])
 input.close()
 
-print(result)
 print(abs(result["N"] - result["S"]) + abs(result["E"] - result["W"]))
